@@ -1,0 +1,17 @@
+[build]
+  # Viteのデフォルト出力先は dist です
+  publish = "dist"
+  # yarn を使用している場合、Netlifyは自動的に検知しますが明示するのが安全です
+  command = "yarn build"
+
+[[redirects]]
+  # 全てのリクエストを index.html にリライト（SPAのルーティング維持）
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  # 静的資産のキャッシュ最適化（Viteが生成するハッシュ付きファイル用）
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
