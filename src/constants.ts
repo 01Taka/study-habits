@@ -16,5 +16,7 @@ export const AUDIO_LIBRARY = {
     },
     { id: "village", label: "村", path: "/sounds/village.mp3" },
     { id: "bubble", label: "泡", path: "/sounds/bubble.mp3" },
+    { id: "wind_chime", label: "風鈴", path: "/sounds/wind_chime.mp3" },
+    { id: "alarm", label: "アラーム音", path: "/sounds/alarm.mp3" },
   ],
 };
